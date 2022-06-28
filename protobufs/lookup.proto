@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package dnsResolve;
+
+// Define the service
+service Resolver {
+  rpc Resolve (DnsQuestion) returns (Answer) {}
+}
+
+// The DNS Question
+message DnsQuestion {
+  string name = 1;
+  RRDataType rrdatatype = 2;
+
+  enum RRDataType {
+    A = 0;
+    AAAA = 1;
+  }
+}
+
+// Define the Answer
+message Answer {
+  string json = 1;
+}
