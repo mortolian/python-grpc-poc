@@ -74,4 +74,3 @@ protoc --python_out=[path/to/c#_output_directory] --php_out=[path/to/js_output_d
 
 - https://linuxcommandlibrary.com/man/protoc
 - https://tsh.io/blog/grpc-php/
-- 
